@@ -21,11 +21,11 @@ const theResult = [img1, img2].flat()
 
 try {
     if (theResult.length !== resultImage.length)
-        (() => throw new Error('Result length is wrong'))()
+        throw new Error('Result length is wrong')
 
     for (let x = 0; x < theResult.length; x++) {
         if (!compareTwoArrays(theResult[x], resultImage[x])) {
-            (() => throw new Error(`Error in RESULT at row ${x}!`))()
+            throw new Error(`Error in RESULT at row ${x}!`)
         }
     }
     console.log('All went fine')
